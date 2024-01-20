@@ -181,7 +181,7 @@ export default function Home() {
         if (error) {
           setFormErr(false);
         } else {
-          setCookie("is-submitted", true);
+          setCookie("is-submitted", true, { maxAge: 60 * 60 * 3});
           setIsSubmitted(true);
           router.push("/thankyou");
         }
